@@ -3,12 +3,12 @@ var captured = null;
 var highestZ = 0;
 var highestId = 0;
 
-var SQL_INSERT = "INSERT INTO MyStickys (id, note, timstamp, left, top, zindex) VALUES(?,?,?,?,?,?)";
-var SQL_DELETE = "DELETE FROM MyStickys WHERE id = ?";
-var SQL_UPDATE = "UPDATE MyStickys SET note = ?, timestamp = ?, left = ?, top = ?, zindex = ? WHERE id = ?";
-var SQL_COUNT = "SELECT COUNT(*) FROM MyStickys";
-var SQL_CREATE_TABLE = "CREATE TABLE MyStickys (id REAL UNIQUE, note TEXT, timestamp REAL, left TEXT, top TEXT, zindex REAL)";
-var SQL_SELECT = "SELECT id, note, timestamp, left, top, zindex FROM MyStickys ORDER BY id DESC";
+const SQL_INSERT = "INSERT INTO MyStickys (id, note, timstamp, left, top, zindex) VALUES(?,?,?,?,?,?)";
+const SQL_DELETE = "DELETE FROM MyStickys WHERE id = ?";
+const SQL_UPDATE = "UPDATE MyStickys SET note = ?, timestamp = ?, left = ?, top = ?, zindex = ? WHERE id = ?";
+const SQL_COUNT = "SELECT COUNT(*) FROM MyStickys";
+const SQL_CREATE_TABLE = "CREATE TABLE MyStickys (id REAL UNIQUE, note TEXT, timestamp REAL, left TEXT, top TEXT, zindex REAL)";
+const SQL_SELECT = "SELECT id, note, timestamp, left, top, zindex FROM MyStickys ORDER BY id DESC";
 
 if (window.openDatabase) {
     db = openDatabase("Notes", "1.0", "Stickys", 10000000);
