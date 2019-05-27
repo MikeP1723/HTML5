@@ -156,6 +156,7 @@ Note.prototype = {
         delete this._saveTimer;
     },
 
+    // TODO: Need to debug
     save: function () {
         this.cancelPendingSave();
         if ("dirty" in this) {
@@ -169,6 +170,7 @@ Note.prototype = {
         });
     },
 
+    // TODO: need to debug
     saveAsNew: function () {
         this.timestamp = new Date().getTime();
 
