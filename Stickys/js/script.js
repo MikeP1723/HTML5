@@ -178,7 +178,7 @@ Note.prototype = {
 
         db.transaction(function (tx) {
             tx.executeSql(SQL_INSERT, [note.id, note.text, note.timestamp, note.left, note.top, note.zIndex]);
-        })
+        });
     },
 
     onMouseDown: function (e) {
